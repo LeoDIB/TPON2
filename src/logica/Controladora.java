@@ -109,29 +109,7 @@ public class Controladora {
          
         
     }
-    public boolean ValidaNroClienteVacio(String nCliente) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
- 
-         Class.forName(sDriver).newInstance();    
-        con = DriverManager.getConnection(sURL,"pelu","768pelu");
-            
-            
-        PreparedStatement    pstm = con.prepareStatement("SELECT nroCliente FROM Cliente WHERE nroCliente = '" + nCliente + "'");
-           
-        try (ResultSet res = pstm.executeQuery()) {
-            while(res.next()){
-                String nroCliente = res.getString("nroCliente");
-                if ( nCliente.equals("") ){
-                    
-                    return true;
-                } 
-            }
-        }
-        return false;
-       
-         
-        
-    }
-    
+   
     }
     
     

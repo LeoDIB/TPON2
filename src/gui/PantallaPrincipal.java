@@ -341,7 +341,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         String alergico = (String) jComboBoxAlergico.getSelectedItem();
 
         try {
-            if (control.ValidaNroClienteVacio(nroCliente) == true) {
+            if (  "".equals(nroCliente)) {
 
                 JOptionPane.showMessageDialog(null, "Nro de Cliente necesario ", "ERROR", JOptionPane.ERROR_MESSAGE);
                 
